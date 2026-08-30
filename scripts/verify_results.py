@@ -23,6 +23,14 @@ def main() -> None:
     assert len(scaled) == 36
     assert len(ablation) == 48
     assert all(row["status"] == "completed" for row in scaled + ablation)
+    source_ref = "runs-scaled/20260830-120856"
+    reused = [row for row in ablation if "reused_from" in row]
+    assert len(reused) == 24
+    assert all(row["reused_from"] == source_ref for row in reused)
+    ablation_manifest = json.loads((ABLATION / "manifest.json").read_text())
+    ablation_summary = json.loads((ABLATION / "summary.json").read_text())
+    assert ablation_manifest["source_run"] == source_ref
+    assert ablation_summary["manifest"] == ablation_manifest
 
     scaled_conditions = Counter(row["condition"] for row in scaled)
     assert scaled_conditions == {"baseline": 12, "placebo": 12, "oakx": 12}

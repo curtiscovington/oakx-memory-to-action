@@ -3,6 +3,9 @@ __pycache__/
 .pytest_cache/
 .venv/
 .DS_Store
+build/
+dist/
+*.egg-info/
 
 # Excluded development pilots and generated fixture repositories.
 /runs/

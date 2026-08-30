@@ -88,7 +88,7 @@
     "reused_episode_count": 24,
     "seed": 7319,
     "source_manifest_sha256": "4a7b0b0658f57c5ea0c017b1be94d0ae46a7fc5368328e8c8c4821e79cdd62cf",
-    "source_run": "/home/cucovin/Dev/oakx-reuse-study/runs-scaled/20260830-120856",
+    "source_run": "runs-scaled/20260830-120856",
     "started_at": "2026-08-30T19:35:47.935123+00:00",
     "status": "frozen_ablation",
     "study": "oakx-calculator-2x2-ablation",

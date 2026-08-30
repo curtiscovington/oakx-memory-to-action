@@ -4,6 +4,9 @@ Reproducible local experiments testing the Oracle Agent Knowledge Exchange
 (OAKX): can a governed, Git-backed knowledge repository help fresh agents solve
 repository incidents under a fixed investigation budget?
 
+This repository contains the evaluation harness and frozen study artifacts. It
+is not the full OAKX production implementation.
+
 ![Strict success across the 2x2 ablation](figures/ablation-strict-success.svg)
 
 ## Headline result
@@ -38,7 +41,7 @@ deliberately excluded from version control.
 
 ## Reproduce
 
-Requirements: Python 3.12+, Git, Ollama, and the exact model configured in the
+Requirements: Python 3.11+, Git, Ollama, and the exact model configured in the
 JSON files. No third-party Python packages are required.
 
 ```bash
@@ -62,5 +65,7 @@ model, twelve synthetic tasks, one deterministic run per cell, and an eight-call
 budget. They do not establish that OAKX outperforms WikiSkill, generalizes across
 models, or has completed its autonomous contribution/review loop.
 
-No software license has been selected yet. This repository is initially staged
-privately for editorial review.
+## Release and license
+
+The blog post is pinned to release [`v0.1.0`](https://github.com/curtiscovington/oakx-memory-to-action/tree/v0.1.0).
+Code, protocols, and result artifacts are released under the [MIT License](LICENSE).

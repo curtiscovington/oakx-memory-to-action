@@ -273,6 +273,7 @@ def validate_source(config: dict[str, Any], project: Path) -> tuple[Path, dict[s
 
 def execute(config_path: Path, project: Path, output_root: Path) -> Path:
     config = json.loads(config_path.read_text())
+    source_ref = str(config["source_run"])
     lock_config = dict(config)
     lock_config["conditions"] = ["baseline", "placebo", "oakx"]
     validate_config(lock_config)
@@ -289,7 +290,7 @@ def execute(config_path: Path, project: Path, output_root: Path) -> Path:
     manifest = {
         "study": "oakx-calculator-2x2-ablation", "status": "frozen_ablation",
         "started_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-        "source_run": str(source), "source_manifest_sha256": hashlib.sha256((source / "manifest.json").read_bytes()).hexdigest(),
+        "source_run": source_ref, "source_manifest_sha256": hashlib.sha256((source / "manifest.json").read_bytes()).hexdigest(),
         "protocol_sha256": hashlib.sha256(protocol.read_bytes()).hexdigest(),
         "task_bank_sha256": source_manifest["task_bank_sha256"],
         "model": config["model"], "model_digest": model["digest"],
@@ -325,7 +326,7 @@ def execute(config_path: Path, project: Path, output_root: Path) -> Path:
         if row["condition"] in mapping:
             copied = dict(row)
             copied["condition"] = mapping[row["condition"]]
-            copied["reused_from"] = str(source)
+            copied["reused_from"] = source_ref
             reused.append(copied)
     combined = reused + new_rows
     with (run_dir / "episodes.jsonl").open("w") as handle:
