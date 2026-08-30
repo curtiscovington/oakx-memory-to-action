@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+
+# Excluded development pilots and generated fixture repositories.
+/runs/
+/runs-scaled/*/fixtures/
+/runs-ablation/*/fixtures/
+
+# Only the frozen, audited public result bundles are tracked.
+/runs-scaled/*
+!/runs-scaled/20260830-120856/
+/runs-ablation/*
+!/runs-ablation/20260830-123547/

@@ -1,0 +1,37 @@
+{
+  "agent_implementation": "single sequential Ollama chat loop; no model routing or subagents",
+  "concurrency": 1,
+  "config_sha256": "9a0021d03606d5c48e42825eb38774106aa6e1815aae5d6e282fe82fe12fd95f",
+  "context_window": 8192,
+  "endpoint": "http://127.0.0.1:11434",
+  "episode_count": 36,
+  "git": "git version 2.43.0",
+  "max_tool_calls": 8,
+  "model": "qwen3.8:27b-q4_K_M",
+  "model_details": {
+    "context_length": 262144,
+    "embedding_length": 5120,
+    "families": [
+      "qwen35"
+    ],
+    "family": "qwen35",
+    "format": "gguf",
+    "parameter_size": "27.3B",
+    "parent_model": "",
+    "quantization_level": "Q4_K_M"
+  },
+  "model_digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+  "oakx_commit": "7a1b6e2bfca59f15345429201c335108501973b4",
+  "placebo_commit": "960a2c2436885d03b82b12976321d1d54aa2d29c",
+  "protocol_sha256": "30ac83f25f55b6fd865e14f457c656ca62661177ff728d30a604d8b698378cae",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "seed": 7319,
+  "started_at": "2026-08-30T19:08:56.446485+00:00",
+  "status": "frozen_scaled_run",
+  "study": "oakx-scaled-bounded-retrieval",
+  "task_bank_sha256": "bc4702b4a75aded12e6ed19b78710ef4cdecade25a378c7941270bdb1a0c6b53",
+  "task_count": 12,
+  "temperature": 0,
+  "tool_policy": "read-only list/search/read/finish; no shell, writes, or network tool",
+  "world_spec_sha256": "f3fb34ab835f4c67a9d1d240ae91c2d18974ed031c53fcb18c823ba0cffad564"
+}

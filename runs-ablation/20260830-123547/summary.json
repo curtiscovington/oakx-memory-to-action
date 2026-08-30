@@ -1,0 +1,98 @@
+{
+  "cells": {
+    "no_oakx_calculator": {
+      "calculator_uses": 4,
+      "mean_calls": 8,
+      "mean_wall_seconds": 39.86241666666667,
+      "n": 12,
+      "root_rate": 0.16666666666666666,
+      "source_rate": 0.5,
+      "strict_rate": 0.16666666666666666,
+      "strict_successes": 2,
+      "submissions": 2,
+      "value_rate": 0.16666666666666666
+    },
+    "no_oakx_no_calculator": {
+      "calculator_uses": 0,
+      "mean_calls": 8,
+      "mean_wall_seconds": 34.26391666666667,
+      "n": 12,
+      "root_rate": 0.0,
+      "source_rate": 0.25,
+      "strict_rate": 0.0,
+      "strict_successes": 0,
+      "submissions": 0,
+      "value_rate": 0.0
+    },
+    "oakx_calculator": {
+      "calculator_uses": 9,
+      "mean_calls": 6.75,
+      "mean_wall_seconds": 39.7015,
+      "n": 12,
+      "root_rate": 1.0,
+      "source_rate": 1.0,
+      "strict_rate": 0.9166666666666666,
+      "strict_successes": 11,
+      "submissions": 12,
+      "value_rate": 0.9166666666666666
+    },
+    "oakx_no_calculator": {
+      "calculator_uses": 0,
+      "mean_calls": 6.583333333333333,
+      "mean_wall_seconds": 39.10733333333333,
+      "n": 12,
+      "root_rate": 1.0,
+      "source_rate": 1.0,
+      "strict_rate": 0.5,
+      "strict_successes": 6,
+      "submissions": 12,
+      "value_rate": 0.5
+    }
+  },
+  "contrasts": {
+    "calculator_with_oakx": {
+      "ci_high": 0.6666666666666666,
+      "ci_low": 0.16666666666666666,
+      "difference": 0.4166666666666667
+    },
+    "calculator_without_oakx": {
+      "ci_high": 0.4166666666666667,
+      "ci_low": 0.0,
+      "difference": 0.16666666666666666
+    },
+    "factorial_interaction": {
+      "ci_high": 0.5833333333333334,
+      "ci_low": -0.08333333333333333,
+      "interaction": 0.25
+    },
+    "oakx_with_calculator": {
+      "ci_high": 1.0,
+      "ci_low": 0.5,
+      "difference": 0.75
+    },
+    "oakx_without_calculator": {
+      "ci_high": 0.75,
+      "ci_low": 0.25,
+      "difference": 0.5
+    }
+  },
+  "label": "FROZEN 2x2 ABLATION \u2014 TWO CELLS REUSED, TWO CELLS NEW",
+  "manifest": {
+    "calculator": "answer-blind safe AST arithmetic evaluator",
+    "context_window": 8192,
+    "max_tool_calls": 8,
+    "model": "qwen3.8:27b-q4_K_M",
+    "model_digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+    "new_episode_count": 24,
+    "protocol_sha256": "2af806053ca0830c488967c31516086ed680953855ef8d6962b7dedc1fe9ceb3",
+    "reused_episode_count": 24,
+    "seed": 7319,
+    "source_manifest_sha256": "4a7b0b0658f57c5ea0c017b1be94d0ae46a7fc5368328e8c8c4821e79cdd62cf",
+    "source_run": "/home/cucovin/Dev/oakx-reuse-study/runs-scaled/20260830-120856",
+    "started_at": "2026-08-30T19:35:47.935123+00:00",
+    "status": "frozen_ablation",
+    "study": "oakx-calculator-2x2-ablation",
+    "task_bank_sha256": "bc4702b4a75aded12e6ed19b78710ef4cdecade25a378c7941270bdb1a0c6b53",
+    "temperature": 0
+  }
+}
